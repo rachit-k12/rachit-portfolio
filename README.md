@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rachit Kumar — Portfolio
 
-## Getting Started
+Modern, minimal portfolio website built with Next.js 14, showcasing Rachit's journey from small-town UP to Sarvam AI to building Veyu AI.
 
-First, run the development server:
+## Live Site
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Production:** [https://rachit-portfolio-steel.vercel.app](https://rachit-portfolio-steel.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design Philosophy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Pure Black/White:** No gradients, no colors — just #000000 and #FFFFFF
+- **Minimal Animations:** Subtle fade-ins, smooth scroll, clean transitions
+- **Text-First:** Content speaks louder than design tricks
+- **Modern 2026 Trends:** Clean typography, generous whitespace, subtle borders
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
 
-## Learn More
+- **Next.js 14** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **Lenis** (Smooth Scroll)
+- **Framer Motion** (Minimal Animations)
 
-To learn more about Next.js, take a look at the following resources:
+## Built With Curiosity
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+© 2026 Rachit Kumar
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🤖 Generated with Claude Code

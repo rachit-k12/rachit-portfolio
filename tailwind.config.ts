@@ -9,11 +9,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#0A0A0A",
-        secondary: "#FAFAFA",
-        accent: "#2563EB",
-        muted: "#6B7280",
-        border: "#E5E7EB",
+        primary: "#0F0F0F",
+        secondary: "#FFFFFF",
+        accent: {
+          blue: "#3B82F6",
+          purple: "#8B5CF6",
+          green: "#10B981",
+          orange: "#F59E0B",
+        },
+        muted: "#71717A",
+        border: "#E4E4E7",
       },
       fontFamily: {
         sans: [

@@ -28,8 +28,8 @@ const Badge = ({ children, variant = 'default', size = 'md' }: { children: React
 
 const Button = ({ children, variant = 'primary', size = 'md', onClick }: { children: React.ReactNode; variant?: string; size?: string; onClick?: () => void }) => {
   const variants = {
-    primary: 'bg-accent-blue text-white hover:bg-blue-600',
-    secondary: 'bg-white text-primary border border-border hover:bg-gray-50'
+    primary: 'bg-blue-500 text-white hover:bg-blue-600',
+    secondary: 'bg-white text-gray-900 border border-gray-200 hover:bg-gray-50'
   };
 
   const sizes = {
@@ -40,7 +40,7 @@ const Button = ({ children, variant = 'primary', size = 'md', onClick }: { child
   return (
     <button
       onClick={onClick}
-      className={`inline-flex items-center justify-center rounded-[var(--radius-button)] font-semibold transition-all ${variants[variant as keyof typeof variants]} ${sizes[size as keyof typeof sizes]}`}
+      className={`inline-flex items-center justify-center rounded-lg font-semibold transition-all ${variants[variant as keyof typeof variants]} ${sizes[size as keyof typeof sizes]}`}
     >
       {children}
     </button>
@@ -58,17 +58,17 @@ export default function Home() {
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
 
   return (
-    <main className="bg-white text-primary">
+    <main className="bg-white text-gray-900">
       {/* Minimal Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-border">
-        <div className="max-w-[var(--container)] mx-auto px-8 py-4 flex justify-between items-center">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
           <Link href="/" className="font-serif font-semibold text-xl">
             Rachit Kumar
           </Link>
           <div className="flex gap-6 text-sm font-medium">
-            <a href="#work" className="hover:text-accent-blue transition-colors">Work</a>
-            <a href="#about" className="hover:text-accent-blue transition-colors">About</a>
-            <a href="#contact" className="hover:text-accent-blue transition-colors">Contact</a>
+            <a href="#work" className="hover:text-blue-500 transition-colors">Work</a>
+            <a href="#about" className="hover:text-blue-500 transition-colors">About</a>
+            <a href="#contact" className="hover:text-blue-500 transition-colors">Contact</a>
           </div>
         </div>
       </nav>
@@ -103,9 +103,9 @@ export default function Home() {
             transition={{ delay: 0.6 }}
             className="mb-12"
           >
-            <p className="text-xl text-muted max-w-3xl mx-auto leading-relaxed">
-              20-year-old founder at <span className="text-accent-purple font-semibold">Veyu AI</span>.
-              Ex-<span className="text-accent-blue font-semibold">Sarvam AI</span>.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              20-year-old founder at <span className="text-purple-600 font-semibold">Veyu AI</span>.
+              Ex-<span className="text-blue-600 font-semibold">Sarvam AI</span>.
               80K+ lines of production code. 1M+ daily API calls.
             </p>
           </motion.div>
@@ -132,12 +132,12 @@ export default function Home() {
           transition={{ delay: 1.2 }}
           className="absolute bottom-12 left-1/2 -translate-x-1/2"
         >
-          <div className="flex flex-col items-center gap-2 text-muted">
+          <div className="flex flex-col items-center gap-2 text-gray-500">
             <span className="text-sm font-medium">Scroll</span>
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
-              className="w-[1px] h-12 bg-gradient-to-b from-muted to-transparent"
+              className="w-[1px] h-12 bg-gradient-to-b from-gray-500 to-transparent"
             />
           </div>
         </motion.div>
@@ -145,7 +145,7 @@ export default function Home() {
 
       {/* Work - Bento Grid */}
       <section id="work" className="py-24 px-8 bg-gray-50">
-        <div className="max-w-[var(--container)] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -171,7 +171,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="md:col-span-2 md:row-span-2"
             >
-              <div className="h-full bg-gradient-to-br from-blue-500 to-purple-600 text-white p-10 rounded-[var(--radius-card)] shadow-lg hover:shadow-2xl transition-shadow cursor-pointer">
+              <div className="h-full bg-gradient-to-br from-blue-500 to-purple-600 text-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow cursor-pointer">
                 <div className="mb-4">
                   <Badge variant="green">Production Scale</Badge>
                 </div>
@@ -198,14 +198,14 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <div className="h-full bg-white p-8 rounded-[var(--radius-card)] shadow-lg hover:shadow-xl transition-shadow cursor-pointer border border-border">
+              <div className="h-full bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow cursor-pointer border border-gray-200">
                 <div className="mb-4">
                   <Badge variant="indigo">Execution Speed</Badge>
                 </div>
                 <h3 className="font-semibold text-2xl mb-2">LLM Chat UI</h3>
                 <div className="text-4xl font-bold mb-1">500K+</div>
-                <p className="text-sm text-muted mb-4">downloads first week</p>
-                <p className="text-sm text-muted">
+                <p className="text-sm text-gray-600 mb-4">downloads first week</p>
+                <p className="text-sm text-gray-600">
                   Built in 3 days under pressure. LaTeX, code formatting, feedback integration.
                 </p>
               </div>
@@ -218,7 +218,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="h-full bg-gradient-to-br from-green-400 to-emerald-600 text-white p-8 rounded-[var(--radius-card)] shadow-lg hover:scale-[1.02] transition-transform cursor-pointer">
+              <div className="h-full bg-gradient-to-br from-green-400 to-emerald-600 text-white p-8 rounded-2xl shadow-lg hover:scale-[1.02] transition-transform cursor-pointer">
                 <div className="mb-4">
                   <Badge variant="green">Solo Build</Badge>
                 </div>
@@ -239,7 +239,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="md:col-span-2"
             >
-              <div className="h-full bg-gradient-to-br from-orange-400 to-pink-500 text-white p-10 rounded-[var(--radius-card)] shadow-lg hover:shadow-2xl transition-shadow cursor-pointer">
+              <div className="h-full bg-gradient-to-br from-orange-400 to-pink-500 text-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow cursor-pointer">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
                   <Badge variant="orange">Currently Building</Badge>
@@ -266,14 +266,14 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <div className="h-full bg-white p-8 rounded-[var(--radius-card)] shadow-lg hover:shadow-xl transition-shadow cursor-pointer border border-border">
+              <div className="h-full bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow cursor-pointer border border-gray-200">
                 <div className="mb-4">
                   <Badge variant="indigo">Full Ownership</Badge>
                 </div>
                 <h3 className="font-semibold text-2xl mb-2">API Playgrounds</h3>
                 <div className="text-4xl font-bold mb-1">6</div>
-                <p className="text-sm text-muted mb-4">playgrounds built</p>
-                <p className="text-sm text-muted">
+                <p className="text-sm text-gray-600 mb-4">playgrounds built</p>
+                <p className="text-sm text-gray-600">
                   Rebuilt entire dashboard. 6 AI playgrounds from scratch.
                 </p>
               </div>
@@ -284,7 +284,7 @@ export default function Home() {
 
       {/* About - Asymmetric Layout */}
       <section id="about" className="py-24 px-8">
-        <div className="max-w-[var(--container)] mx-auto grid md:grid-cols-2 gap-20 items-center">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -298,17 +298,17 @@ export default function Home() {
               From small-town UP to building AI for thousands
             </h2>
             <div className="space-y-6">
-              <p className="text-lg text-muted leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Grew up in Uttar Pradesh, discovered programming through Java in school,
                 and found my way to building production systems serving millions.
               </p>
-              <p className="text-lg text-muted leading-relaxed">
-                At <span className="text-primary font-semibold">Sarvam AI</span>, I was the only
+              <p className="text-lg text-gray-600 leading-relaxed">
+                At <span className="text-gray-900 font-semibold">Sarvam AI</span>, I was the only
                 intern selected from my college. Shipped products serving 1M+ API calls daily,
                 wrote 80K+ lines of production code, learned what it means to build at scale.
               </p>
-              <p className="text-lg text-muted leading-relaxed">
-                Now building <span className="text-primary font-semibold">Veyu AI</span> — a premium
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Now building <span className="text-gray-900 font-semibold">Veyu AI</span> — a premium
                 AI partner to businesses. Target: $100K revenue by end of 2026.
               </p>
             </div>
@@ -321,7 +321,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-[var(--radius-card)]">
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
               <h3 className="font-semibold text-lg mb-4">Skills</h3>
               <div className="flex flex-wrap gap-2">
                 {['Frontend', 'React/Next.js', 'AI Engineering', 'TypeScript', 'System Design'].map((skill) => (
@@ -333,21 +333,21 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-indigo-50 p-6 rounded-[var(--radius-card)] hover:shadow-lg transition-shadow">
+              <div className="bg-indigo-50 p-6 rounded-2xl hover:shadow-lg transition-shadow">
                 <div className="text-4xl font-bold text-indigo-600 mb-2">80K+</div>
-                <p className="text-sm text-muted">Lines of Code</p>
+                <p className="text-sm text-gray-600">Lines of Code</p>
               </div>
-              <div className="bg-green-50 p-6 rounded-[var(--radius-card)] hover:shadow-lg transition-shadow">
+              <div className="bg-green-50 p-6 rounded-2xl hover:shadow-lg transition-shadow">
                 <div className="text-4xl font-bold text-green-600 mb-2">1M+</div>
-                <p className="text-sm text-muted">Daily API Calls</p>
+                <p className="text-sm text-gray-600">Daily API Calls</p>
               </div>
-              <div className="bg-orange-50 p-6 rounded-[var(--radius-card)] hover:shadow-lg transition-shadow">
+              <div className="bg-orange-50 p-6 rounded-2xl hover:shadow-lg transition-shadow">
                 <div className="text-4xl font-bold text-orange-600 mb-2">500K+</div>
-                <p className="text-sm text-muted">Downloads</p>
+                <p className="text-sm text-gray-600">Downloads</p>
               </div>
-              <div className="bg-red-50 p-6 rounded-[var(--radius-card)] hover:shadow-lg transition-shadow">
+              <div className="bg-red-50 p-6 rounded-2xl hover:shadow-lg transition-shadow">
                 <div className="text-4xl font-bold text-red-600 mb-2">20</div>
-                <p className="text-sm text-muted">Years Old</p>
+                <p className="text-sm text-gray-600">Years Old</p>
               </div>
             </div>
           </motion.div>
@@ -366,7 +366,7 @@ export default function Home() {
           <h2 className="font-serif text-5xl md:text-6xl font-semibold mb-6">
             Let's Build Something
           </h2>
-          <p className="text-xl text-muted mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
             Open to collaborations, consulting, and conversations about AI, startups, and building the future.
           </p>
 
@@ -385,10 +385,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-8 border-t border-border">
-        <div className="max-w-[var(--container)] mx-auto flex justify-between items-center">
-          <p className="text-sm text-muted">© 2026 Rachit Kumar</p>
-          <p className="text-sm text-muted">Built with curiosity</p>
+      <footer className="py-12 px-8 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <p className="text-sm text-gray-600">© 2026 Rachit Kumar</p>
+          <p className="text-sm text-gray-600">Built with curiosity</p>
         </div>
       </footer>
     </main>

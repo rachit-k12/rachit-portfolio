@@ -9,27 +9,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#000000",
-        secondary: "#FFFFFF",
-        muted: "rgba(255, 255, 255, 0.6)",
-        border: "rgba(255, 255, 255, 0.1)",
+        primary: "#0A0A0A",
+        secondary: "#FAFAFA",
+        accent: "#2563EB",
+        muted: "#6B7280",
+        border: "#E5E7EB",
       },
       fontFamily: {
         sans: [
+          'Inter',
           '-apple-system',
           'BlinkMacSystemFont',
-          'Inter',
           'Segoe UI',
           'Roboto',
           'sans-serif',
         ],
       },
       maxWidth: {
-        container: '1200px',
+        container: '1280px',
       },
       borderRadius: {
-        card: '16px',
-        button: '8px',
+        card: '12px',
+        button: '6px',
       },
     },
   },

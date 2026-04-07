@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geist.className}>
-      <body className="bg-black">
+      <body className="bg-secondary">
         <SmoothScrollProvider>
           {children}
         </SmoothScrollProvider>
